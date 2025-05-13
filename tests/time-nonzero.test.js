@@ -3,7 +3,7 @@ async function fn(){
   setTimeout(()=>{
   let a = await fetch("http://127.0.0.1:3000/time");
   let a_json = await a.json();
-  if(a_json.time !== 0){
+  if(a_json.time === 0){
     throw new Error('Error');
   }
   },3000)
