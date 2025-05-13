@@ -17,8 +17,8 @@ jobs:
       - name: Install deps
         run: npm i
       - name: Install fetch
-        run: npm install node-fetch@2
+        run: npm install node-fetch@2 
       - name: Run server
-        run: node src/index.js
+        run: node src/index.js &
       - name: Run tests
         run: node tests/time-nonzero.test.js
