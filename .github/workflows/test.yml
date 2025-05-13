@@ -16,5 +16,7 @@ jobs:
         with: { 'node-version': '16' }
       - name: Install deps
         run: npm i
+      - name: Install fetch
+        run: npm install node-fetch@2
       - name: Run tests
         run: node tests/time-nonzero.test.js
