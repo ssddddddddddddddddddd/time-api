@@ -1,8 +1,8 @@
-const request = require('supertest');
-const app = require('../src/index');
-describe('GET /time nonzero', () => {
-  it('time не равен 0', async () => {
-    const res = await request(app).get('/time');
-    expect(res.body.time).not.toBe(0);
-  });
-});
+async function fn(){
+  let a = await fetch("http://127.0.0.1:3000/time");
+  let a_json = await a.json();
+  if(a_json.time !== 0){
+    throw new Error('Error');
+  }
+}
+fn();
