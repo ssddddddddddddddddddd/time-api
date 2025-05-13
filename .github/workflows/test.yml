@@ -17,6 +17,6 @@ jobs:
       - name: Install deps
         run: npm ci
       - name: Install deps supertest
-        run: npm supertest
+        run: npm i supertest
       - name: Run tests
         run: node tests/time-nonzero.test.js
